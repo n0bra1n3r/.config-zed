@@ -1,0 +1,65 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "left": "vim::WrappingLeft",
+      "right": "vim::WrappingRight",
+      "l": "vim::WrappingLeft",
+      ";": "vim::WrappingRight"
+    }
+  },
+  {
+    "context": "VimControl && !menu && vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "s": "vim::PushSneak",
+      "x": ["workspace::SendKeystrokes", "\" _ x"],
+      "C": ["workspace::SendKeystrokes", "\" _ C"],
+      "D": ["workspace::SendKeystrokes", "\" _ D"],
+      "S": "vim::PushSneakBackward"
+    }
+  },
+  {
+    "context": "VimControl && !menu && vim_mode == normal",
+    "bindings": {
+      "alt-\\": "workspace::NewFileSplitVertical",
+      "alt--": "workspace::NewFileSplitHorizontal",
+      "alt-;": "workspace::ActivatePaneRight",
+      "alt-j": "workspace::ActivatePaneDown",
+      "alt-k": "workspace::ActivatePaneUp",
+      "alt-l": "workspace::ActivatePaneLeft",
+      "enter": "workspace::Save",
+      "space space": "file_finder::Toggle",
+      "space /": "pane::DeploySearch",
+      "space x": "pane::CloseAllItems",
+      "space z": "workspace::ToggleZoom",
+      "y d": "vim::VisualDeleteLine",
+      "y y": "vim::YankLine",
+      "y x": "vim::DeleteRight",
+      "y D": "vim::DeleteToEndOfLine",
+      "Y": ["workspace::SendKeystrokes", "y $"]
+    }
+  },
+  {
+    "context": "VimControl && !menu && vim_mode == visual",
+    "bindings": {
+      "tab": "editor::Indent",
+      "shift-tab": "editor::Outdent",
+      "y": "editor::Copy"
+    }
+  }
+]
