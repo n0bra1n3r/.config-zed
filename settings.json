@@ -35,6 +35,13 @@
   "terminal": {
     "env": {
       "EDITOR": "zed --wait"
+    },
+    "shell": {
+      "with_arguments": {
+        "program": "bash",
+        "args": ["--login", "-i"],
+        "title_override": "Bash"
+      }
     }
   },
   "project_panel": {
