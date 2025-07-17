@@ -38,9 +38,9 @@
     },
     "shell": {
       "with_arguments": {
-        "program": "bash",
-        "args": ["--login", "-i"],
-        "title_override": "Bash"
+        "program": "sh",
+        "args": ["~/.local/bin/shell"],
+        "title_override": "Shell"
       }
     }
   },
