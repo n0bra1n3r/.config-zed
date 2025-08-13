@@ -38,8 +38,8 @@
     },
     "shell": {
       "with_arguments": {
-        "program": "sh",
-        "args": ["~/.local/bin/shell"],
+        "program": "bash",
+        "args": ["--login", "-i"],
         "title_override": "Shell"
       }
     }
