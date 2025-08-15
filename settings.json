@@ -34,7 +34,8 @@
   },
   "terminal": {
     "env": {
-      "EDITOR": "zed --wait"
+      "EDITOR": "zed",
+      "GIT_EDITOR": "zed"
     },
     "shell": {
       "with_arguments": {
