@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Open UE editor",
+    "command": "~/.local/bin/ue_edit.ps1",
+    "reveal": "never",
+    "hide": "on_success"
+  },
+  {
+    "label": "Build UE project",
+    "command": "~/.local/bin/ue_build.ps1",
+    "hide": "on_success"
+  },
+  {
+    "label": "Build UE clang database",
+    "command": "~/.local/bin/ue_build_clang_db.ps1",
+    "hide": "on_success"
+  }
+]
