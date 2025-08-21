@@ -61,5 +61,16 @@
       "shift-tab": "editor::Outdent",
       "y": "editor::Copy"
     }
+  },
+  {
+    "context": "((VimControl && !menu) && vim_mode == normal)",
+    "bindings": {
+      "space r": [
+        "task::Spawn",
+        {
+          "reveal_target": "center"
+        }
+      ]
+    }
   }
 ]
