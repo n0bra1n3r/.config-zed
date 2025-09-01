@@ -2,7 +2,7 @@
   {
     "label": "Open UE editor",
     "command": "~/.local/bin/ue_edit.ps1",
-    "reveal": "no_focus",
+    "reveal": "always",
     "hide": "on_success"
   },
   {
@@ -15,19 +15,19 @@
       "-resx=1024",
       "-resy=768"
     ],
-    "reveal": "no_focus",
+    "reveal": "always",
     "hide": "on_success"
   },
   {
     "label": "Build UE project",
     "command": "~/.local/bin/ue_build.ps1",
-    "reveal": "no_focus",
+    "reveal": "always",
     "hide": "on_success"
   },
   {
     "label": "Build UE clang database",
     "command": "~/.local/bin/ue_build_clang_db.ps1",
-    "reveal": "no_focus",
+    "reveal": "always",
     "hide": "on_success"
   }
 ]
