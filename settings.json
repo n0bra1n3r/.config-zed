@@ -20,10 +20,7 @@
     "play_sound_when_agent_done": true
   },
   "vim_mode": true,
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
+  "max_tabs": 9,
   "theme": {
     "mode": "dark",
     "light": "One Light",
