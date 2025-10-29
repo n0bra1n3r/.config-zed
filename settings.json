@@ -7,9 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "features": {
-    "edit_prediction_provider": "none"
-  },
   "agent": {
     "default_profile": "minimal",
     "default_model": {
@@ -19,15 +16,34 @@
     "model_parameters": [],
     "play_sound_when_agent_done": true
   },
-  "vim_mode": true,
-  "max_tabs": 9,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "One Dark"
+  "features": {
+    "edit_prediction_provider": "none"
   },
   "git_panel": {
     "dock": "right"
+  },
+  "lsp": {
+    "discord_presence": {
+      "details": "In {workspace}",
+      "idle": {
+        "timeout": 300,
+        "action": "clear_activity"
+      },
+      "state": "Working on {filename} in {directory_name}",
+      "git_integration": true
+    }
+  },
+  "max_tabs": 9,
+  "outline_panel": {
+    "dock": "right"
+  },
+  "project_panel": {
+    "button": true,
+    "dock": "right",
+    "git_status": true
+  },
+  "tab_bar": {
+    "show": false
   },
   "terminal": {
     "env": {
@@ -42,15 +58,10 @@
       }
     }
   },
-  "project_panel": {
-    "button": true,
-    "dock": "right",
-    "git_status": true
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
   },
-  "outline_panel": {
-    "dock": "right"
-  },
-  "tab_bar": {
-    "show": false
-  }
+  "vim_mode": true
 }
