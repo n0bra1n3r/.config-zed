@@ -9,32 +9,27 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "terminal_panel::ToggleFocus"
-    }
+      "ctrl-`": "terminal_panel::ToggleFocus",
+    },
   },
   {
     "context": "VimControl && !menu",
     "bindings": {
       "left": "vim::WrappingLeft",
       "right": "vim::WrappingRight",
-      "l": "vim::WrappingLeft",
-      ";": "vim::WrappingRight"
-    }
-  },
-  {
-    "context": "vim_mode == normal || vim_mode == visual",
-    "bindings": {
+      ";": "vim::WrappingRight",
       "c": ["workspace::SendKeystrokes", "\" _ c"],
       "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "l": "vim::WrappingLeft",
       "s": "vim::PushSneak",
       "x": ["workspace::SendKeystrokes", "\" _ x"],
       "C": ["workspace::SendKeystrokes", "\" _ C"],
       "D": ["workspace::SendKeystrokes", "\" _ D"],
-      "S": "vim::PushSneakBackward"
-    }
+      "S": "vim::PushSneakBackward",
+    },
   },
   {
-    "context": "vim_mode == normal",
+    "context": "vim_mode == normal && !menu",
     "bindings": {
       "alt-\\": "workspace::NewFileSplitVertical",
       "alt--": "workspace::NewFileSplitHorizontal",
@@ -48,25 +43,27 @@
       "space r": [
         "task::Spawn",
         {
-          "reveal_target": "center"
-        }
+          "reveal_target": "center",
+        },
       ],
       "space x": "pane::CloseAllItems",
       "space z": "workspace::ToggleZoom",
+      "shift-tab": "editor::GoToNextChange",
+      "tab": "editor::GoToPreviousChange",
       "y d": "vim::VisualDeleteLine",
       "y y": "vim::YankLine",
       "y x": "vim::DeleteRight",
       "y D": "vim::DeleteToEndOfLine",
-      "Y": ["workspace::SendKeystrokes", "y $"]
-    }
+      "Y": ["workspace::SendKeystrokes", "y $"],
+    },
   },
   {
-    "context": "vim_mode == visual",
+    "context": "vim_mode == visual && !menu",
     "bindings": {
-      "tab": "editor::Indent",
-      "shift-tab": "editor::Outdent",
+      "tab": ["workspace::SendKeystrokes", "> g v"],
+      "shift-tab": ["workspace::SendKeystrokes", "< g v"],
       "p": ["workspace::SendKeystrokes", "P"],
-      "y": "editor::Copy"
-    }
-  }
+      "y": ["workspace::SendKeystrokes", "y g v"],
+    },
+  },
 ]
