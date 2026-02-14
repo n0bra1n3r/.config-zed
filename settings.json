@@ -7,61 +7,65 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "none",
+  },
   "agent": {
     "default_profile": "minimal",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4-latest",
     },
     "model_parameters": [],
-    "play_sound_when_agent_done": true
-  },
-  "features": {
-    "edit_prediction_provider": "none"
+    "play_sound_when_agent_done": true,
   },
   "git_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "lsp": {
     "discord_presence": {
       "details": "In {workspace}",
       "idle": {
         "timeout": 300,
-        "action": "clear_activity"
+        "action": "clear_activity",
       },
       "state": "Working on {filename} in {directory_name}",
-      "git_integration": true
-    }
+      "git_integration": true,
+    },
   },
   "max_tabs": 9,
   "outline_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "project_panel": {
     "button": true,
     "dock": "right",
-    "git_status": true
+    "git_status": true,
   },
   "tab_bar": {
-    "show": false
+    "show": false,
   },
   "terminal": {
     "env": {
-      "EDITOR": "zed",
-      "GIT_EDITOR": "zed"
+      "EDITOR": "zed --wait",
+      "GIT_EDITOR": "zed --wait",
+      "GIT_EXTERNAL_DIFF": "zed --wait --diff",
+      "PAGER": "zed --wait -",
+      "GIT_PAGER": "zed --wait -",
+      "VISUAL": "zed --wait",
     },
     "shell": {
       "with_arguments": {
         "program": "bash",
         "args": ["--login", "-i"],
-        "title_override": "Shell"
-      }
-    }
+        "title_override": "Shell",
+      },
+    },
   },
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
-  "vim_mode": true
+  "vim_mode": true,
 }
