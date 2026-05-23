@@ -7,20 +7,40 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "edit_predictions": {
-    "provider": "none",
-  },
   "agent": {
     "default_profile": "minimal",
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-latest",
+      "provider": "llama.cpp",
+      "model": "Ternary-Bonsai-8B-Q2_0",
     },
     "model_parameters": [],
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
   },
   "git_panel": {
     "dock": "right",
+  },
+  "language_models": {
+    "openai_compatible": {
+      "llama.cpp": {
+        "api_url": "http://localhost:8077/v1",
+        "available_models": [
+          {
+            "name": "Ternary-Bonsai-8B-Q2_0",
+            "max_tokens": 25000,
+            "max_output_tokens": 5000,
+            "max_completion_tokens": 25000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+            },
+          },
+        ],
+      },
+    },
   },
   "lsp": {
     "discord_presence": {
