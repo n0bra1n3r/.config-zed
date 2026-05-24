@@ -63,7 +63,7 @@
     "git_status": true,
   },
   "tab_bar": {
-    "show": false,
+    "show": true,
   },
   "terminal": {
     "env": {
