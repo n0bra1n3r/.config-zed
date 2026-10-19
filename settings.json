@@ -69,14 +69,6 @@
     "show": true,
   },
   "terminal": {
-    "env": {
-      "EDITOR": "zeditor --wait",
-      "GIT_EDITOR": "zeditor --wait",
-      "GIT_EXTERNAL_DIFF": "zeditor --wait --diff",
-      "PAGER": "zeditor --wait -",
-      "GIT_PAGER": "zeditor --wait -",
-      "VISUAL": "zeditor --wait",
-    },
     "shell": {
       "with_arguments": {
         "program": "bash",
